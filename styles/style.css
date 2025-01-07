@@ -90,10 +90,6 @@ html {
   object-position: center;
 }
 
-.content__video-card-description-container {
-  flex-grow: 1;
-}
-
 .search-form__fieldset-title {
   font-family: 'Fira Sans Condensed';
   font-size: 18px;
@@ -146,6 +142,7 @@ html {
   flex-grow: 1;
   flex-basis: 0;
   max-width: 196px;
+  flex-grow: 1;
 }
 .visually-hidden {
   position: absolute;
@@ -170,6 +167,10 @@ fieldset {
   display: flex;
   width: fit-content;
   margin-top: 5px;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
 }
 
 .search-form__label:hover {
@@ -213,6 +214,9 @@ fieldset {
   cursor: pointer;
   box-sizing: border-box;
   margin-right: 5px;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-bottom: 2px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -223,7 +227,6 @@ fieldset {
   color: #fff;
   border: 1px solid #fff;
   background-color: #fff;
-  color: #fff;
 }
 
 .button {
@@ -287,17 +290,6 @@ fieldset {
   padding-right: 3px;
 }
 
-.preloader-template {
-  position: absolute;
-}
-
-.preloader {
-  position: absolute;
-}
-
-.preloader-chasing-squares {
-  position: absolute;
-}
 h1,
 h2,
 h3,
