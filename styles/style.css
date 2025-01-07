@@ -8,6 +8,26 @@ html {
   block-size: 100%;
 }
 
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 .page {
   inline-size: 1200px;
   block-size: 100%;
@@ -55,7 +75,7 @@ html {
 
 .content__list-container {
   height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -91,7 +111,7 @@ html {
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
@@ -112,6 +132,11 @@ html {
 .content__card-link {
   text-decoration: none;
   color: #fff;
+  display: block;
+}
+
+.content__card-link_current {
+  background-color: rgba(84, 80, 80, 1);
 }
 
 .content__video-card-title {
@@ -129,10 +154,15 @@ html {
 }
 
 .content__video-card-description {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   line-height: 16.2px;
   font-size: 18px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
 }
 
 .content__video-card-description-container {
@@ -172,17 +202,18 @@ fieldset {
   outline: 1px solid #fff;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text{
   text-decoration: underline;
 }
 
 .search-form__textfield {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed',sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
   width: 225px;
   border: none;
+  color: rgba(255, 255, 255, 0.7);
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   background-color: transparent;
@@ -191,11 +222,6 @@ fieldset {
 
 .search-form__textfield:focus {
   outline: none;
-}
-
-.search-form__textfield:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
 }
 
 .search-form__textfield:active {
@@ -235,21 +261,24 @@ fieldset {
   line-height: 21.6px;
   align-items: center;
   color: #fff;
-  background-color: #1b1919;
+  background-color: transparent;
   border: 1px solid #fff;
   cursor: pointer;
+  min-height: 34px;
 }
 
 .search-form__submit-button {
   margin-top: 20px;
   width: 194px;
-  height: 34px;
 }
 
 .more-button {
   width: 390px;
-  height: 34px;
   margin-top: 30px;
+}
+
+.button:focus {
+  outline: none;
 }
 
 .button:hover {
@@ -287,25 +316,6 @@ fieldset {
 .content__list-item {
   padding-left: 3px;
   padding-right: 3px;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
 }
 
 /* Кастомный скроллбар */
