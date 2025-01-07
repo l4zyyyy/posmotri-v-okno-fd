@@ -96,6 +96,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 390px;
 }
 
 .content__video-card {
@@ -202,7 +203,7 @@ fieldset {
   outline: 1px solid #fff;
 }
 
-.search-form__label:hover .search-form__label-text{
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
